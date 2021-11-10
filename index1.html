@@ -1,44 +1,115 @@
 <!DOCTYPE html>
-<html-lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="scc/style.css">
-    <title>Дачний сервер</title>
-</head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<body> 
-    
-        <div id="NAME"> <h1>Сімейна ферма <span class="TIMCo">TIM&Co</span></h1>
-        </div>
-             <div class="data">
-                <p> Введіть персональні дані</p>
-                
-    
-                <form action="#" method="GET">
-                   <input placeholder="Ім'я або логін" tabindex="1" name="username" type="text"/><br>
-                       
-                    <input placeholder="пароль" tabindex="2" name="userpass"  type="password">
-                </form>
-                   
-                <div id="Vivat">
-                    <span>вітаємо</span>
-                    відвідувачів <span class="verum"> приватного сервера</span>
-                    створеного для автоматизаці роботи <span>дачного господарства</span>
-                </div> 
-                
-            </div>
-                
-        </div>
-    </div>    
-                <div id="menuworks"> 
-                    <h2>На господарці:</h2>
-                <h3>бройлери, несучки, гуси, качки</h3><br>
-                    <h3>один басейн з рибою</h3><br>
-                    <h3>наші кози і барани</h3><br>
-                    <h3>споруди захищеного ґрунту</h3><br>
-                    <h3>сушка лікарських трав</h3><br>
-					 <h3>негалюцигенні гриби</h3><br>
-                </div>   
-  
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+
+}
+
+h4{
+  font-size: 14px;
+  color: rgb(52, 228, 17);
+ 
+}
+#myBtn {
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: rgb(152, 226, 103);
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: #000
+}
+#SendSITY{width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: rgb(226, 65, 65);
+    color: #fff;
+    cursor: pointer;
+
+}
+#SendSITY:hover {
+    background: #ddd;
+    color: #000;
+    transition-duration: 2s;
+}
+
+
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="VID_20210916_152706.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>ТІМ-Со </h1>
+  <h4><i>сімейна ферма</i></h4>
+  <p>Ми вирощуємо органічну їжу для своєї родини. Використовуємо лише природні методи захисту рослин.<br>А наші тварини, риби, птахи не знають які на смак антибіотики чи стероїдні стимулятори росту.<br> Усі ж знають: неможливо обдурити природу. Тому живемо з нею в гармонії. І вона за це дарує нам здоровий урожай і природню їжу... <br>Хочете скуштувати?<br>Приєднуйтеся! 
+    Ми завжди раді.</p>
+  <button id="myBtn" onclick="myFunction()"><a href="index2.html"> крамницю</a> </button>
+  <button id="SendSITY" onclick="myFunction2()"><a href="https://teplopar.jimdofree.com"> Все про нас!</a></button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "В крамницю!";
+  } else {
+    video.pause();
+    btn.innerHTML = "Назад";
+  }
+}
+function myFunction2() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Все про нас!";
+    <link rel="stylesheet" href="index2.html"> 
+  } else {
+    video.pause();
+    btn.innerHTML = "Назад";
+  }
+ 
+}
+</script>
+
 </body>
 </html>
